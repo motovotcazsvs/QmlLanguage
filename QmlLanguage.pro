@@ -12,11 +12,20 @@ SOURCES += main.cpp \
 # но только для использования утилиты lupdate, чтобы она могла узнать,
 # какие строки нуждаются в переводе
 lupdate_only {
-    SOURCES += main.qml
+    SOURCES += \
+        main.qml \
+        Page2.qml \
+        Page1.qml
 }
 
 RESOURCES += qml.qrc \
-    translations.qrc
+    translations.qrc \
+    Page2.qml \
+    Page1.qml
+
+OTHER_FILES += \
+    Page2.qml \
+    Page1.qml
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -31,3 +40,10 @@ TRANSLATIONS += QmlLanguage_ru.ts \
 
 HEADERS += \
     qmltranslator.h
+
+DISTFILES += \
+    Page2.qml \
+    Page1.qml
+
+
+

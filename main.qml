@@ -1,5 +1,10 @@
-import QtQuick 2.6
-import QtQuick.Controls 1.5
+import QtQuick 2.5
+import QtQuick.Window 2.2
+import QtQuick.Controls 2.0
+import QtQuick.Layouts 1.1
+import QtQuick.Controls 1.4
+import QtGraphicalEffects 1.0
+
 
 ApplicationWindow {
     id: applicationWindow
@@ -93,4 +98,17 @@ ApplicationWindow {
             margins: 10
         }
     }
+
+    Loader {
+        source:"Page1.qml";
+      }
+
+    Page1 {
+        id: page1
+    }
+
+    Page2 {
+        id: page2
+    }
+
 }
